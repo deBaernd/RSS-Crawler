@@ -9,8 +9,7 @@
 		$content = file_get_contents($source['url']);
 		$xml = simplexml_load_string($content);
 		foreach($xml->channel->item as $item) {
-			$webContent = file_get_contents((string) $item->link);
-			$ret = preg_match('/(windkraft|kita)/mi', $webContent, $pat);
+			$ret = preg_match('/(windkraft|kita)/mi', strip_tags(html_entity_decode((string) $item->description)), $pat);
 			if ($ret) {
 				$output = $output . $source['name'] . ' ' . $pat[1] . ' ' . ((string) $item->link) . "\n";
 			}
