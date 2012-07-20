@@ -1,6 +1,6 @@
 #!/usr/bin/php5
 <?php
-	$output = '';
+	$output = file_get_contents('tmp.mail');
 	$rssdir = dirname(__FILE__);
 	chdir($rssdir);
 
@@ -21,5 +21,4 @@
 		}
 	}
 	
-	if ($output) mail('debaernd+rss@debaernd.de', 'RSS Treffer', $output);
-
+	file_put_contents('tmp.mail', $output);
