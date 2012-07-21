@@ -12,7 +12,7 @@
 			$content = strip_tags(html_entity_decode((string) $item->description));
 			$id = md5($content);
 			if (!file_exists('./archive/' . $id)) {
-				file_put_contents('./archive/' . $id, ((string) $item->link) . "\n" . $content);
+				file_put_contents('./archive/' . $id, ((string) $item->link) . "\n" . ((string) $item->title) . "\n" . $content);
 				$ret = preg_match('/(windkraft|kita|Landesgartenschau|Aartalbahn)/mi', $content, $pat);
 				if ($ret) {
 					$output = $output . $source['name'] . ' ' . $pat[1] . ' ' . ((string) $item->link) . "\n";
