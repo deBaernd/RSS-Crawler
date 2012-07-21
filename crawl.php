@@ -1,8 +1,8 @@
 #!/usr/bin/php5
 <?php
-	$output = file_get_contents('tmp.mail');
 	$rssdir = dirname(__FILE__);
 	chdir($rssdir);
+	$output = file_get_contents('tmp.mail');
 
 	$rss_sources = json_decode(file_get_contents('sources.json'), true);
 	foreach($rss_sources as $source) {
