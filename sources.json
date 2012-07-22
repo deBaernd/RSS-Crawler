@@ -5,6 +5,12 @@
 	}, {
 		"name": "Kurier",
 		"url": "http://fulltextrssfeed.com/www.wiesbadener-kurier.de/region/rheingau/landkreis/index.rss"
+	}, {
+		"name": "CDU Kreis",
+		"url": "http://www.epenportal.de/100352/rss-feed.xml"
+	},{
+		"name": "CDU Fraktion",
+		"url": "http://www.epenportal.de/100352/rss-feed.xml",
 	}
 ]
 
