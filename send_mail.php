@@ -6,4 +6,5 @@
 	if ($content) {
 		mail('debaernd+rss@debaernd.de', 'RSS Treffer', $content);
 		file_put_contents('tmp.mail', '');
+		echo file_get_contents('tmp.mail');
 	}
