@@ -1,5 +1,4 @@
-﻿#!/usr/bin/php5
-<?php
+﻿<?php
 	$rssdir = dirname(__FILE__);
 	chdir($rssdir);
 	$output = file_get_contents('tmp.mail');
