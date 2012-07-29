@@ -1,4 +1,4 @@
-﻿#!/usr/bin/php5
+#!/usr/bin/php5
 <?php
 	$rssdir = dirname(__FILE__);
 	chdir($rssdir);
