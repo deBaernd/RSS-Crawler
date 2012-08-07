@@ -13,7 +13,7 @@
 			$id = md5($content);
 			if (!file_exists('./archive/' . $id)) {
 				file_put_contents('./archive/' . $id, ((string) $item->link) . "\n" . ((string) $item->title) . "\n" . $content);
-				$ret = preg_match('/(windkraft|kita|Landesgartenschau|Aartalbahn|Versorgungsnetz|Blockheizkraftwerk|BHKW|Photovoltaik|Subventionen|Kreisverwaltung|ÖPNV|RTV|Energie|Partei|Bürgerinitiative|Jugend|Sozialpolitik|Arbeitsrecht|Jobcenter|ALG II|Fallmanager|GBW|Bauhaus|Domäne Mechthildshausen|Grundsicherung|Sanktionen|Regelbedarf|Sozialgericht|Zeitarbeit|Bürgerarabeit|Ein-Euro-Jobs|Eingliederungsvereinbarungen|Private Arbeitsvermittler|Bedinungsloses Grundeinkommen|BGE|Arbeitslosenstatistik|Hartz IV|Sozialgesetzbuch|SGB|Erwerblosen-Beratung|maut|autobahnähnlich)/mi', $content, $pat);
+				$ret = preg_match('/\b(windkraft|kita|Landesgartenschau|Aartalbahn|Versorgungsnetz|Blockheizkraftwerk|BHKW|Photovoltaik|Subventionen|Kreisverwaltung|ÖPNV|RTV|Energie|Partei|Bürgerinitiative|Jugend|Sozialpolitik|Arbeitsrecht|Jobcenter|ALG II|Fallmanager|GBW|Bauhaus|Domäne Mechthildshausen|Grundsicherung|Sanktionen|Regelbedarf|Sozialgericht|Zeitarbeit|Bürgerarabeit|Ein-Euro-Jobs|Eingliederungsvereinbarungen|Private Arbeitsvermittler|Bedinungsloses Grundeinkommen|BGE|Arbeitslosenstatistik|Hartz IV|Sozialgesetzbuch|SGB|Erwerblosen-Beratung|maut|autobahnähnlich)\b/mi', $content, $pat);
 				if ($ret) {
 					$output = $output . $source['name'] . ' ' . $pat[1] . ' ' . ((string) $item->link) . "\n";
 				}
